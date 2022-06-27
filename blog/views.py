@@ -32,3 +32,11 @@ def index(request):
 
 def about(request):
     return render(request, 'acercade.html')
+
+
+def buscar(request):
+    if request.method == 'POST':
+        posts = Post.objects.filter(content__contains=request.POST.get('filtro'))
+        return render(request, 'busqueda.html', {'posts': posts})
+
+    return redirect('home')
