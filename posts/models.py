@@ -19,6 +19,7 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('viewPosts')
 
+    """
     def save(self):
         super().save()
         img = Image.open(self.foto.path)
@@ -26,6 +27,7 @@ class Post(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.foto.path)
+    """
 
     class Meta:
         db_table = 'posts'
