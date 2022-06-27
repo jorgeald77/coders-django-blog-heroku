@@ -1,0 +1,24 @@
+{% extends 'layouts/layout.html' %}
+{% block title %}| Inicia sesión{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <section class="p-4 my-4 w-75 shadow rounded mx-auto">
+        <header class="text-center mb-5">
+            <p class="h2">Blog</p>
+            <p class="h6">Inicia sesión</p>
+        </header>
+
+        <div class="mt-2 mx-3">
+            <form action="{% url 'login' %}" method="post" autocomplete="on">
+                {% csrf_token %}
+                <div class="d-flex flex-column gap-3">
+                    {{ form_login|crispy }}
+                </div>
+
+                <div class="my-4 d-flex gap-2 justify-content-end">
+                    <button type="submit" class="btn btn-dark">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
