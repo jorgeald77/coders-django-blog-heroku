@@ -23,6 +23,7 @@ Bajo la metodología agil del marco de trabajo en Scrum nos organizamos para que
 - Home (Jorge)
 - Authenticacion (Jorge)
 - Buscador (Jorge)
+- Publicacion Heroku (Jorge)
 
 
 
